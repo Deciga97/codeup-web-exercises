@@ -19,3 +19,12 @@ let amazonPerHr = prompt("what about amazon?")
 
 alert("so you made a total of " + (facebook*facebookPerHr + google*googlePerHr + amazon*amazonPerHr))
 
+let isFull = confirm("Is the class full?")
+let hasConflict = confirm("Do you have a conlfict with your schedule?")
+alert(!isFull && !hasConflict)
+
+let itemsBought = prompt("How many items did you buy?")
+let offer = conifrm("Has the offer expired?")
+let isPremium = confirm("Are you a premium member?")
+
+alert((parseFloat(itemsBought) > 2 || isPremium) && !offer)
