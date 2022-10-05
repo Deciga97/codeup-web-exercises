@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External JS</title>
+</head>
+    <script src="js/external.js">
+    console.log(Hello from inline JavaScript".
+    </script>
+</body>
+</html>
