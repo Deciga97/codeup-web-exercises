@@ -1,4 +1,5 @@
 "use strict";
+(function (){
 
 /**
 * TODO:
@@ -124,3 +125,5 @@ function applyDiscount(price, priceDiscount) {
     let totalPrice = price + disocuntAmount};
 
 alert(applyDicount(100, .2))
+
+    let iffeVar = "I'm local to the IIFE."; })();

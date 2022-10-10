@@ -1,104 +1,5 @@
 'use strict';
 
-    /*if(5 === 5){
-    console.log('run this code!')
-}
-
-    if('') {
-        console.log("run this code!")
-    }
-/* IF ELSE STATEMENT EXPLAINED BELOW:
-    in addition if the IF statement, the ELSE will block the run if the condition is NOT met.
- */
-
-   /* if(true) {
-        console.log("the condition evaluates to true")
-
-
-    } else {
-        console.log('the condition evulates to false')
-
-    }
-
-
-    let currentShow = prompt('what show are you currently watching?')
-
-    if(currentShow.toLowerCase == "house of dragons" || currentShow.toLowerCase == "rick and morty") {
-        console.log("yooo me too!")
-    } else {
-        console.log('Mmmm whack')
-    }
-
-    //  1. Create two variables, one for password and one for username.
-    //  2. Create two more variables named userUsername and userPassword that prompt the user to enter in their credentials.
-    //  3. Create an if statement and log to the console if the user enters in the correct information.
-
-       /* EXAMPLE:
-        username = "jayman"
-        password = "password1"
-
-
-    let user = 'stevedee97';
-    let password = 'kilo6';
-
-    let userName = prompt('whats your username?');
-    let userPassword = prompt('whats your password?')
-
-    if(userName === user && userPassword === password) {
-        console.log('Alright Alright Alright')
-    } else {
-        console.log('negative woody')
-    }
-
-    // IF ELSE/ IF/ELSE:
-    //
-
-    let shoes = 'red';
-    let shirt = 'hawaiian';
-    let jeans = 'denim';
-    let jacket = 'true';
-
-    if (shoes === 'red') {
-        console.log('If you are wearing red shoes, you are dismissed.')
-    } else if(pants === 'plaid') {
-        console.log('If you wearing plaid pants, you are dismissed')}
-
-
-        */
-//  If myName is equal to "Codeup", assign the value "hello, " + myName, if myName is not equal, assign the greeting variable "Hello, stranger!"
-
-    // let myName = "codeup";
-
-    //let greeting = (myName === "codeup") ? "hello, " + myName: "hello stranger!";
-
-    //currentShow.toLowerCase() === "house of dragons" ? "sick" : "I don't like that show";
-
-    // SWITCH STATEMENTS
-
-   /* let menu = prompt("please choose an item: \n1 cheeseburger \n2. chicken sandwhich\n3. chili cheese fries\n4. philly cheesesteak");
-    switch(menu) {
-        case'1':
-            alert('The cheeseburger cost $5.99')
-            break;
-        case '2':
-                alert('the chicken sandwhich comes with pickles and is $4.99');
-            break;
-        case '3':
-                alert('The chili cheese fries are $2.99')
-            break;
-        case '4':
-                alert('the philly cheesesteak has mushrooms and is $7.99');
-            break;
-        default:
-            alert('sorry that item is not on the menu')
-    }
-    */
-/* ########################################################################## */
-
-
-
-/* ########################################################################## */
-
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -119,26 +20,26 @@
  * console.logging the function's return value
  */
 
-// function analyzeColor(color) {
-//     if(color === 'blue') {
-//        return console.log('blue is my favorite color')
-//     } else if(color ==='red') {
-//        return console.log("red is also my favorite color")
-//     } else if(color === 'white') {
-//        return console.log("White gets dirty easily")
-//     } else {
-//        return console.log("I don't have an opinion on that color.")
-//    }
-// }
-// analyzeColor('blue')
+function analyzeColor(color) {
+    if(color === 'blue') {
+       return console.log('blue is my favorite color')
+    } else if(color ==='red') {
+       return console.log("red is also my favorite color")
+    } else if(color === 'white') {
+       return console.log("White gets dirty easily")
+    } else {
+       return console.log("I don't have an opinion on that color.")
+   }
+}
+analyzeColor('blue')
 
 
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
+ - `randomColor`: contains a single random color value from the list (this
+                will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
@@ -168,8 +69,8 @@ function analyzeColors(color) {
         default: console.log("i dont have an opinion on that color")
     }
 }
-//
-// analyzeColors('red')
+
+analyzeColors('red')
 
 /**
  * TODO:
@@ -178,7 +79,22 @@ function analyzeColors(color) {
  * function to show it to the user.
  */
 
-analyzeColors(prompt("whats your favorite color"))
+let userAnswer = prompt('Pick a color.')
+
+function analyzeColors(userAnswer) {
+    switch(userAnswer) {
+        case "red":
+            console.log("Red is my favorite color")
+            break;
+        case "white":
+            console.log("White gets dirty easy")
+            break;
+        case "blue":
+            console.log("Blue is my favorite color")
+            break;
+        default: console.log("i dont have an opinion on that color")
+    }
+}
 
 
 
@@ -204,6 +120,35 @@ analyzeColors(prompt("whats your favorite color"))
  * return value.
  */
 
+function calculateTotal(luckyNumber, totalCost){
+    if(luckyNumber === 1){
+        let discount = .1;
+        return (totalCost - (totalCost) * discount);
+    }
+    else if (luckyNumber === 2){
+        let discount = .25;
+        return (totalCost - (totalCost) * discount);
+    }
+    else if (luckyNumber === 3){
+        let discount = .35;
+        return (totalCost - (totalCost) * discount);
+    }
+    else if (luckyNumber === 4){
+        let discount = .5;
+        return (totalCost - (totalCost) * discount);
+    }
+    else if (luckyNumber === 5) {
+        let discount = 1;
+        return (totalCost - (totalCost) * discount);
+    }
+    else{
+        return totalCost;
+    }
+}
+console.log(calculateTotal(0,100));
+console.log(calculateTotal(3,43));
+console.log(calculateTotal(5,1000000));t s
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -214,6 +159,16 @@ analyzeColors(prompt("whats your favorite color"))
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+
+let luckyNumber = Math.floor(Math.random() * 6);
+
+let undiscountedBill = Number(prompt('Total bill price?'));
+
+let newTotal = calculateTotal(luckyNumber, undiscountedBill)
+alert('Your lucky number was ' + luckyNumber)
+alert('Your undiscounted price is: ' + undiscountedBill)
+alert('Your new price with the discount is: ' + newTotal);
+
 
 /**
  * TODO:
@@ -233,3 +188,34 @@ analyzeColors(prompt("whats your favorite color"))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+function pickANumber(){
+    let wantsToPlay = confirm('Would you like to pick a number?');
+    if (wantsToPlay === true){
+        let chosenNumber = prompt('alright give me a number.')
+        chosenNumber = Number(chosenNumber);
+        let isEvenOrOdd = chosenNumber % 2;
+        let plus100 = chosenNumber + 100;
+        let isPosORNeg = (chosenNumber > 0)
+        if(isEvenOrOdd === 1){
+            alert(chosenNumber + ' is odd.');
+        }
+        if(isEvenOrOdd === 0){
+            alert(chosenNumber + ' is even.');
+        }
+        alert(chosenNumber + ' + 100 = ' + plus100);
+        if(isPosORNeg === true){
+            alert(chosenNumber + ' is positive.');
+        }
+        else if(isPosORNeg === false){
+            alert(chosenNumber + ' is negative.');
+        }
+        else{
+            alert(chosenNumber + ' is neither positive nor negative.')
+        }
+    }
+    else{
+        alert('then why are you here?');
+    }
+}
+pickANumber();

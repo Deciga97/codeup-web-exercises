@@ -46,3 +46,12 @@ let offer = conifrm("Has the offer expired?");
 let isPremium = confirm("Are you a premium member?");
 
 alert((parseFloat(itemsBought) > 2 || isPremium) && !offer);
+
+
+
+// // define a function and immediately invoke (i.e. call) it
+// (function () {
+//     var iffeVar = "I'm local to the IIFE.";
+// })();
+//
+// alert(iffeVar); // undefined
