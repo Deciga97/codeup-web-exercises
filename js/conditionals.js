@@ -38,8 +38,10 @@ analyzeColor('blue')
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
- - `randomColor`: contains a single random color value from the list (this
-                will contain a different color every time the page loads)
+// `randomColor`: contains a single random color value from the list (this
+                //will contain a different color every time the page loads)
+
+
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
@@ -147,7 +149,7 @@ function calculateTotal(luckyNumber, totalCost){
 }
 console.log(calculateTotal(0,100));
 console.log(calculateTotal(3,43));
-console.log(calculateTotal(5,1000000));t s
+console.log(calculateTotal(5,1000000));
 
 /**
  * TODO:
