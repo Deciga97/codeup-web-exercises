@@ -20,18 +20,23 @@
  * console.logging the function's return value
  */
 
+// 1. Function named analyzeColor
+// 2. Establish a parameter named 'color'.
+// 3. Need to return a string.
+// 4. Return a string depending on the input that is passed.
+
 function analyzeColor(color) {
     if(color === 'blue') {
-       return console.log('blue is my favorite color')
+       return console.log('blue is my favorite color');
     } else if(color ==='red') {
-       return console.log("red is also my favorite color")
+       return console.log("red is also my favorite color");
     } else if(color === 'white') {
-       return console.log("White gets dirty easily")
+       return console.log("White gets dirty easily");
     } else {
-       return console.log("I don't have an opinion on that color.")
+       return console.log("I don't have an opinion on that color.");
    }
 }
-analyzeColor('blue')
+console.log(analyzeColor('blue'))
 
 
 
@@ -50,7 +55,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-//console.log(analyzeColor(randomColor))
+// console.log(analyzeColor(randomColor))
 
 /**
  * TODO:
@@ -60,19 +65,19 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 function analyzeColors(color) {
     switch(color) {
         case "red":
-            console.log("Red is my favorite color")
+            return "Red is my favorite color";
             break;
         case "white":
-            console.log("White gets dirty easy")
+            return "White gets dirty easy";
             break;
         case "blue":
-            console.log("Blue is my favorite color")
+            return "Blue is my favorite color";
             break;
-        default: console.log("i dont have an opinion on that color")
+        default: console.log("i dont have an opinion on that color");
     }
 }
 
-analyzeColors('red')
+console.log(analyzeColors('red'));
 
 /**
  * TODO:
@@ -81,20 +86,21 @@ analyzeColors('red')
  * function to show it to the user.
  */
 
+
 let userAnswer = prompt('Pick a color.')
 
 function analyzeColors(userAnswer) {
     switch(userAnswer) {
         case "red":
-            console.log("Red is my favorite color")
+            alert(("Red is my favorite color"));
             break;
         case "white":
-            console.log("White gets dirty easy")
+            alert(("White gets dirty easy"));
             break;
         case "blue":
-            console.log("Blue is my favorite color")
+            alert(("Blue is my favorite color"));
             break;
-        default: console.log("i dont have an opinion on that color")
+        default: alert(("i dont have an opinion on that color"));
     }
 }
 
@@ -121,6 +127,18 @@ function analyzeColors(userAnswer) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+// 1. Function named calculateTotal
+// 2. Establish two parameters, one for luckyNum, and one for totalAmount.
+// 3. Return dicounted price
+// 4. Discounts
+    // 0 = No Discount
+    // 1 = 0.1
+    // 2. = 0.25
+    // 3. = 0.35
+    // 4. = 0.5
+    // 5. = 1
+// Depending on the lucky number, a discount will be applied.
 
 function calculateTotal(luckyNumber, totalCost){
     if(luckyNumber === 1){
@@ -190,6 +208,19 @@ alert('Your new price with the discount is: ' + newTotal);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+// "PSEUDO CODE"
+// 1. Need to use a confirm()
+// 2. Need to use a prompt()
+// 3. Input must be a number data type()
+    // If it is:
+        // alert if even or odd
+        // alert input + 100
+        // alert positive or negative
+    // if its not:
+        // alert incorrect data type
+        // 4. If possible, refactor to function
 
 function pickANumber(){
     let wantsToPlay = confirm('Would you like to pick a number?');
