@@ -25,18 +25,20 @@
 // 3. Need to return a string.
 // 4. Return a string depending on the input that is passed.
 
-function analyzeColor(color) {
+let userInput = prompt("Whats your favorite color?")
+
+function analyzeColor(userInput) {
     if(color === 'blue') {
-       return console.log('blue is my favorite color');
+       return alert('blue is my favorite color');
     } else if(color ==='red') {
-       return console.log("red is also my favorite color");
+       return alert("red is also my favorite color");
     } else if(color === 'white') {
-       return console.log("White gets dirty easily");
+       return alert("White gets dirty easily");
     } else {
-       return console.log("I don't have an opinion on that color.");
+       return alert("I don't have an opinion on that color.");
    }
 }
-console.log(analyzeColor('blue'))
+console.log(analyzeColor)
 
 
 
@@ -49,6 +51,8 @@ console.log(analyzeColor('blue'))
 
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -62,8 +66,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-function analyzeColors(color) {
-    switch(color) {
+function analyzeColors(userInput) {
+    switch(userInput) {
         case "red":
             return "Red is my favorite color";
             break;
@@ -77,7 +81,7 @@ function analyzeColors(color) {
     }
 }
 
-console.log(analyzeColors('red'));
+console.log(analyzeColors);
 
 /**
  * TODO:

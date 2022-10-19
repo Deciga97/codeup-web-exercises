@@ -1,5 +1,5 @@
 "use strict";
-(function (){
+(function () {
 
 /**
 * TODO:
@@ -10,6 +10,12 @@
 * > sayHello("codeup") // returns "Hello, codeup!"
 */
 
+function sayHello(name) {
+    return "Hello " + " " + name + '.'
+}
+
+console.log(sayHello("steve"))
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -19,7 +25,7 @@
  */
 
 function sayHello (name) {
-    return 'hello, ' + name;
+    return 'hello, ' + " " + name;
 }
 let helloMessage = sayHello('steve');
 
@@ -46,7 +52,7 @@ console.log(myName)
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -65,9 +71,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+var number = Math.floor((Math.random() * 3) + 1);
 
 function isTwo(number){
-    return number===2;
+    return number === 2;
 }
 
 
@@ -96,9 +103,9 @@ calculateTip(5,10)
  * then display the dollar amount they should tip
  */
 
-alert('your total is $5')
-let tipPer = prompt('how much would you like to tip?')
-alert('Your total is $' + calculateTip(5, (parseFloat(tipPer))
+// alert('your total is $5')
+// let tipPer = prompt('how much would you like to tip?')
+// alert('Your total is $' + calculateTip(5,  (parseFloat(tipPer)))
 
 
 
@@ -119,11 +126,13 @@ alert('Your total is $' + calculateTip(5, (parseFloat(tipPer))
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
+let discountPercent = .2;
 
 function applyDiscount(price, priceDiscount) {
     let discountAmount = price - (price * discountPercent);
-    let totalPrice = price + disocuntAmount};
+    let totalPrice = price + discountAmount};
 
-alert(applyDicount(100, .2))
+alert(applyDiscount(100, .2))
 
-    let iffeVar = "I'm local to the IIFE."; })();
+    var iffeVar = "I'm local to the IIFE.";
+})();
