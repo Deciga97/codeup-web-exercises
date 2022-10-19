@@ -1,13 +1,15 @@
-'use strict';
+"use strict";
 
-//Use the alert function to show a message that says 'Welcome to my Website!'.
+//  Write some JavaScript code, that is, variables and operators, to describe the following scenarios. Do not worry about the real operations to get the values, the goal of these exercises is to understand how real world conditions can be represented with code.
+
+// Use the alert function to show a message that says 'Welcome to my Website!'
 
 alert("Welcome to my website!");
 
-//Use a prompt to ask for the user's favorite color. Use the user's response to alert a message that says that the color entered is your favorite color too.
-//
+// Use a prompt to ask for the user's favorite color. Use the user's response to alert a message that says that the color entered is your favorite color too.
+
 // For example, if the user enters "blue", your code should alert a message that says:
-//
+
 // "Great, blue is my favorite color too!"
 
 let color = prompt("Whats your favorite color?");
@@ -17,9 +19,9 @@ alert("Woah! "+  color  +" is my favorite color too!");
 
 alert("Blockbuster called and wants there movies back");
 let mermaid = prompt("How many days did you rent out The Little mermaid?");
-let brotherBear = prompt("What about brother bear?");
+let brotherBear = prompt("Okay...what about brother bear?");
 let hercules = prompt("And hercules?");
-alert("Your total will be " + (mermaid*3 + brotherBear*3 + hercules*3));
+alert("At $3 a day, your total will be " + (mermaid*3 + brotherBear*3 + hercules*3));
 
 // Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
 
@@ -37,21 +39,16 @@ alert("so you made a total of " + (facebook*facebookPerHr + google*googlePerHr +
 
 let isFull = confirm("Is the class full?");
 let hasConflict = confirm("Do you have a conlfict with your schedule?");
-alert(!isFull && !hasConflict);
+if(!isFull && !hasConflict) {
+    prompt("Okay, you can enroll.")
+} else {
+    prompt("Sorry no room")
+}
 
 //A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
 
 let itemsBought = prompt("How many items did you buy?");
-let offer = conifrm("Has the offer expired?");
+let offer = confirm ("Has the offer expired?");
 let isPremium = confirm("Are you a premium member?");
 
 alert((parseFloat(itemsBought) > 2 || isPremium) && !offer);
-
-
-
-// // define a function and immediately invoke (i.e. call) it
-// (function () {
-//     var iffeVar = "I'm local to the IIFE.";
-// })();
-//
-// alert(iffeVar); // undefined

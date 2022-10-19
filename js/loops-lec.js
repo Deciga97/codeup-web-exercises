@@ -2,18 +2,18 @@
 
 let i = 10
 
-// while(i < 10) {
-//     i++
-// }
-//
-// console.log("Brokem out of code");
+while(i < 10) {
+    i++
+}
 
-// do While example
+console.log("Brokem out of code");
 
-// do{
-//     console.log(i):
-//     i++;
-// }while(i < 10)
+do While example
+
+do{
+    console.log(i):
+    i++;
+}while(i < 10)
 
 // Mini-Exercises
 
