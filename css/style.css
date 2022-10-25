@@ -1,0 +1,46 @@
+.fancy-header {
+    color: purple;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.fancy-header {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    color: purple;
+}
+
+html {
+    background-color: blanchedalmond;
+    background-image: unset;
+    background-size: 250px;
+    background-position-x: 200px;
+    background-position-y: 200px;
+    background-repeat: no-repeat;
+    font-family: helvetica, arial, serif;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    font-size: large;
+    padding: 40px 40px 40px 40px
+}
+
+a:link {
+    color: blue
+}
+a:visted {
+    color:purple;
+}
+a:hover {
+    color:yellow;
+}
+a:active {
+    color:rosybrown;
+}
