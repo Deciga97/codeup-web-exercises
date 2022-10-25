@@ -48,18 +48,35 @@ raised_hands
 
 
 
-function average(array) {
-    i = 0;
-    i = 0;
-    while(i < array.length(array[i])) {
-        if(isNumeric(array[])) {
-            sum += parseFloat(array[i]);
+// function average(array) {
+//     i = 0;
+//     i = 0;
+//     while(i < array.length(array[i])) {
+//         if(isNumeric(array[])) {
+//             sum += parseFloat(array[i]);
+//
+//         }
+//         i++;
+//     } else {return false
+//
+//     }
+//     return sum / array.length;
+// }
+// average()
 
-        }
-        i++;
-    } else {return false
+//Warm-up:
 
+//Create a function named "filterNegativity" that accepts an array of numbers, and returns an array with only positive numbers.
+
+//Ex: filterNegativity([5, -6, 2, 0, -5, -13]) // returns [5, 2, 0,]
+
+function filterNegativity([x, y, z,]) {
+    if(x && y && z == x && y && z) {
+        return x, y, z,
+    } else {
+        return false
     }
-    return sum / array.length;
+
 }
-average()
+
+console.log(filterNegativity([1, 2, 3]))
