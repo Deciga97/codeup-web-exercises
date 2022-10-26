@@ -219,7 +219,7 @@ NOTE: KEEP IN MIND THESE NEXT METHODS AND STATEMENTS WILL TYPICALLY BE USED WITH
 2. if(condition) {
     // code gets executed here if evaluates to true.
     } else if (condition) {
-    code gets ex if condition 1 is false but condition is true.
+    code gets ex if condition 1 is false but condition 2 is true.
     } else {
     code gets ex if neither condition 1 or condition 2 is true.
     }
@@ -240,7 +240,7 @@ switch(pizzaPreference) {
         break;
 }
 
-REFER BACK TO CONDITONALS CHAPTER FOR MORE INFO ON SWITCH.
+REFER BACK TO CONDITIONALS CHAPTER FOR MORE INFO ON SWITCH.
 --------------------------------------------------------------------------
 
 LOOPS: Loops are used in JavaScript to perform repeated tasks based on a condition. Conditions typically return true or false . A loop will continue running until the defined condition returns false.
@@ -260,7 +260,7 @@ block of code
 IMPORTANT PIECE OF INFO IMO: In general, we will use for loops when we know ahead of time how many times the loop needs to run, and while or do-while loops when we cannot know how many times the loop needs to run.
 
 BREAK AND CONTINUE:
-1. BREAK --> HELPS BREAK OUT OF A LOOP IS A CONDITION IS MET.
+1. BREAK --> HELPS BREAK OUT OF A LOOP IF A CONDITION IS MET.
         var numberToStopAt = 5;
 
 for (var i = 1; i < 100; i++) {
