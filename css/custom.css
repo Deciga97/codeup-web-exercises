@@ -1,0 +1,21 @@
+.jumbo-container {
+    background-image: url("images/pizza.jpg");
+    height: 346px;
+    background-size:cover;
+    text-align: center;
+    margin: auto;
+}
+
+.p-3 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    bottom: 6.5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+}

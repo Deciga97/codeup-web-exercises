@@ -1,0 +1,31 @@
+.top-nav {
+    display: flex;
+    background-color: darkgrey;
+    justify-content: space-between;
+    width: 80em;
+    font-family: 'Montserrat', sans-serif;
+    height: 3em;
+    margin: auto;
+    align-content: space-around;
+    }
+
+
+
+
+}
+
+.active {
+    display: inline-block;
+    color: black;
+    padding: 0.6em;
+    a:hover {
+        background-color:yellow;
+    }
+    a:
+}
+
+.logo {
+    display: flex;
+    padding: .2em;
+    margin: auto;
+}
