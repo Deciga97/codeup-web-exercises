@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <h1 class="main-title">Weather Forecast</h1>
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!--- Link to Mapbox API --->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+<!--  MAP STYLE  -->
+    <style>
+        #map {
+            width: 75%;
+            height: 700px;
+        }
+    </style>
+
+    <!-- Link to CSS --->
+    <link href="css/weather_map_html.css" rel="stylesheet">
+</head>
+
+
+<!--First Section: Heading with a search form. A empty span is also there to become visible with messages that meet certain conditions.-->
+<section class="top-banner">
+    <div class="container">
+        <h1 class="heading">THE WAPP</h1>
+        <form>
+            <input type="text" id="search-bar" placeholder="Search for a city" autofocus>
+            <button type="button" id="button">SUBMIT</button>
+            <span class="msg"></span>
+        </form>
+    </div>
+</section>
+
+
+<!--I want to add this card in, but Idk how to input the data I need into this card. Let alone make 5 more. -->
+<div class="display_weather">
+
+
+</div>
+
+
+
+<!--Second Section: This section contains a list of cities that will be appended if data is available.-->
+<section class="ajax-section">
+    <div class="container">
+        <ul class="cities"></ul>
+    </div>
+</section>
+<li class="city">
+    <h2 class="city-name" data-name="...">
+        <span>...</span>
+        <sup>...</sup>
+    </h2>
+    <span class="city-temp">...<sup>°C</sup></span>
+    <figure>
+<!--        <img class="city-icon" src="..." alt="...">-->
+        <figcaption>...</figcaption>
+    </figure>
+</li>
+
+
+<!--MAP-->
+
+<div id="map"></div>
+
+
+
+<script src="js/keys.js"></script>
+<!-- Load the `mapbox-gl-geocoder` plugin. -->
+<!--<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>-->
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+
+<!-- JQUERY--->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script src="js/weather_map_html.js"></script>
+
+<script>
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+</script>
+<!-- Script to JS File -->
+
+
+
+</body>
+</html>

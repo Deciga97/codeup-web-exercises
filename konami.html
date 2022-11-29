@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<p>Send It.</p>
+
+<form>
+  <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script><script>
+
+  "use strict";
+// kondami array holds the code we want to validate
+  let koNami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+  let userInput = [];
+  let lives = 0;
+
+
+    // $('#textfield').keyup(function(event){
+    //start a for-loop that walks through our konami array and compares the element at index "i" with the usfor(let i = 0; i <= koNami.length-1; i++)erinput from the event keycode
+
+    {
+      // jquery object with the body element selector using the keyup method
+      //keyup method ativates the anonymous function with the event object in the parameter
+      $('body').keyup(function(event){
+        //set userinput to the keycode from the key up event
+        userInput = event.keyCode;
+      });
+        // check if the user input is not the same as konami at index "i"
+        if (userInput !== koNami[i]){
+          // if true - user input is not konami ...
+          alert("not correct code" + "  code: " + event.keyCode + " user input: " + userInput + " konami: " + koNami[i]);
+          //reset the loop and start from beginning of konami
+          i = 0;
+        }
+        //check if userinput is the same as the last index in konami
+        else if(userInput === koNami[koNami.length-1]){
+          lives = 30;
+          alert("correct code -- plus 30 lives" + event.keyCode);
+        };
+      }
+
+  if(lives === 30){
+    alert("congrats you have 30 lives!");
+  };
+
+  $('#textfield').keypre(function() {
+    alert('a key was released!');
+  });
+
+
+
+
+
+
+
+
+
+<!--    let keys = {-->
+<!--    13: "enter",-->
+<!--    37: "left",-->
+<!--    38: "up",-->
+<!--    39: "right",-->
+<!--    40: "down",-->
+<!--    65: "a",-->
+<!--    66: "b"-->
+<!--  }-->
+<!--    let konamiCode = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "enter"];-->
+
+<!--    let keyCount = 0;-->
+
+<!--    $(document).keyup(checkCode);-->
+
+<!--    function checkCode(i) {-->
+<!--    console.log(event.keyCode);-->
+
+<!--    let keyPressed = keys[i.keyCode];-->
+
+<!--    if (keyPressed === konamiCode[keyCount]) {-->
+<!--    keyCount++;-->
+
+<!--    if (keyCount === konamiCode.length) {-->
+<!--    codeActivated();-->
+<!--    resetKey();-->
+<!--  }-->
+<!--  } else {-->
+<!--    resetKey();-->
+<!--  }-->
+<!--  }-->
+
+<!--    function codeActivated(){-->
+<!--    alert("We've been trying to reach you about your car's extended warranty.");-->
+<!--  }-->
+
+<!--    function resetKey() {-->
+<!--    keyCount = 0;-->
+<!--  }-->
+<!--</script>-->
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
