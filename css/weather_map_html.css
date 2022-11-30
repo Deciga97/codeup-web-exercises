@@ -221,5 +221,13 @@ body {
 }
 
 #card {
+    display: inline-flex;
+    justify-content: space-evenly;
     color: white;
 }
+
+.text {
+    display: flex;
+    justify-content: space-evenly;
+}
+

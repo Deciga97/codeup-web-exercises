@@ -10,24 +10,26 @@ const map = new mapboxgl.Map({
     zoom: 9 // starting zoom
 });
 
-// JQUERY code: selects the button element, and calls a function to find coordinates by using geocoding.  //
+// JQUERY code selects the button element and adds an click event listener to it with a function inside the braces to find the coordinates using geocode.  //
 $("#button").click(function findCoordinates() {
+
+    // geocode will then grab the value from the search id using jquery and will use that data collected as an argument for the getLangLong function. //
         geocode($("#search-bar").val(), MAPBOX_TOKEN, map).then(
             function getLatLong(coordinates) {
-                //resetting the Map with the following code //
-
-                //centers the search location //
+                //resetting the Map with the following code: //
+                //map.setCenter will center the maps location. //
                 map.setCenter(coordinates)
 
-                // Zooms in on map //
+                // map.setZoom will zoom in on the location specified. //
                 map.setZoom(14)
 
-                // MARKER //
-                var marker = new mapboxgl.Marker({draggable: true})
+                // Marker is created and has the long and lat set with the coordinates parameters. //
+                let marker = new mapboxgl.Marker({draggable: true})
                     marker.setDraggable(coordinates)
                     .setLngLat([coordinates[0], coordinates[1]])
                     .addTo(map)
 
+                // NOT TOO SURE BUT... marker.on is used to get the coordinates from 'dragend'. the coordinates from drag end will then get put
                 marker.on('dragend' , () => {
                     const lngLat = marker.getLngLat();
                     let coordinates = lngLat.toArray()
@@ -105,7 +107,7 @@ function weatherData(coordinates) {
     });
 }
 
-
+// appending html to empty div //
 let append = function (data) {
     let html = ``
     for (let i = 0; i < data.length; i += 8) {
