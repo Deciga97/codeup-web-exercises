@@ -19,15 +19,47 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<button id="refresh-button" type="button">Click Me</button>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 <script>
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.get('data/inventory.json').done(function(data) {
-        console.log(data);
+    let html1 = "";
+
+    function loadStoreList() {
+
+
+            $.get('data/inventory.json').done(function(data) {
+                console.log(data);
+
+                for(let i =0; i <= data.length -1; i++) {
+
+                    // Appending all this data into a table. //
+                    html1 += "<tr>";
+                    html1 += "<th>" + data[i].title + "</th>";
+                    html1 += "<th>" + data[i].quantity + "</th>";
+                    html1 += "<th>" + data[i].price + "</th>";
+                    html1 += "<th>" + data[i].categories.join(', ') + "</th>";
+                    html1 += "</tr>";
+                }
+                $("#insertProducts").html(html1)
+            });
+
+    }
+
+    $(document).ready(function() {
+        loadStoreList();
+        $("#refresh_button").click(function() {
+            html1 = " ";
+            $("#insertProducts").html(html1);
+        });
     });
+
+
+
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect

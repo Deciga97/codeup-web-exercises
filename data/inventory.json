@@ -30,7 +30,17 @@
             "tool"
         ],
         "price": 10
-    }
+    },
+
+    {
+    "title": "Power Drill",
+    "quantity": 97,
+    "categories": [
+        "tool" ,
+        "powered"
+    ],
+    "price": 10
+}
 ]
 
 
