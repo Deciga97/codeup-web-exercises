@@ -53,17 +53,18 @@ console.log("linked")
 
 
 
-
+// SearchVal was created to store an add event listener on the ID button. After clicking the button, renderNewCity function was called. //
     let searchVal = document.querySelector('#button');
     searchVal.addEventListener('click', renderNewCity);
 
+// The renderNewCity function stores the value from the element ID search-bar into a variable named city and inputs that variable into an AJAX request. //
         function renderNewCity(event) {
             let city = document.getElementById('search-bar').value;
 
-
+            // Prevent default, was used to keep the window from refreshing.
             event.preventDefault();
 
-
+            // AJAX GET request
             $.get("http://api.openweathermap.org/data/2.5/forecast", {
                 APPID: OPEN_WEATHER_APPID,
                 q: city ,
