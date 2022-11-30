@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX BLOG</title>
+</head>
+<body>
+<h1>MY AJAX BLOG</h1>
+<div id="posts"></div>
+
+<!--JQUERY-->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        let html1 = "";
+
+        //AJAX code
+        $.get('data/blogs.json').done(function(data) {
+            console.log(data);
+
+            for (let i = 0; i <= data.length - 1; i++) {
+
+                // Appending all this data into a table. //
+                html1 += "<div>";
+                html1 += "<h1>" + data[i].title + "</h1>";
+                html1 += "<p>" + data[i].content + "</p>";
+                html1 += "<p>" + data[i].categories + "</p>";
+                html1 += "<p>" + data[i].date + "</p>";
+                html1 += "</tr>";
+            }
+            $("#posts").html(html1);
+
+        })
+
+    });
+
+
+
+</script>
+
+</body>
+</html>

@@ -50,6 +50,15 @@ console.log("linked")
 
 
 
+// MAPBOX MAP //
+mapboxgl.accessToken = MAPBOX_TOKEN;
+const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v12', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+
 
 
 
@@ -100,93 +109,4 @@ console.log("linked")
 
         });
         }
-    // })
-    //
-    //     $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //         APPID: OPEN_WEATHER_APPID,
-    //         q: "" + city,
-    //         units: "imperial"
-    //     }).done(function(data){
-    //         console.log("fetch fired")
-    //         console.log(data);
-    //         console.log(data.list[0].main.temp);
-    //         console.log(data.list[0].main.temp_min);
-    //
-    //
-    //         // This for loop is creating HTML cards with data.
-    //         for(var i = 0; i <= 39; i+=8){
-    //             html+= "<div class=\"card\" style=\"width: 18rem;\">";
-    //
-    //             html+= "<img src=\"...\" class=\"card-img-top\" alt=\"...\">";
-    //
-    //             html+= "<h5 class=\"card-title\">Forecast - index"  + i + "</h5>";
-    //
-    //             html+= "<p class=\"card-text\">Current Temp: " + data.list[i].main.temp +"</p>";
-    //
-    //             html+= "<p class=\"card-text\">Max Temp :" + data.list[i].main.temp_max +"</p>";
-    //
-    //             html+= "<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>";
-    //
-    //             html+= "</div>";
-    //             html+= "</div>"
-    //         }
-    //
-    //         $(".display_weather").html(html);
-    //
-    // })
-
-
-
-    // So my first question is about your ".display_weather" class. Where exactly is that class within your html. I had assumed it was a big div contaning the card div so thats what I went with. As of right now, I am getting a reference error on the console stating the weather map input is not defined. My second question is about the get request, I'm getting a 404 on the console. AND my mao is not showing up on my page...
-
-
-
-// $('#top')
-
-    // Converting to JSON data...I THINK. Not sure what .catch is doing. //
-    // fetch(url)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         // do stuff with the data
-    //     })
-    //     .catch(() => {
-    //         msg.textContent = "Please search for a valid city 😩";
-    //     });
-// Now that AJAX is in place, hypothetically speaking...each time the user hits the search button with the right information. Weather data should populate.//
-
-// $.ajax(url).done(function(data) {
-
-// });
-
-
-
-// This is the code to extract the code/value the user searched for, and appends it to the list. //
-
-    // const { main, name, sys, weather } = data;
-    // const icon = `https://openweathermap.org/img/wn/${
-    //     weather[0]["icon"]
-    // }@2x.png`;
-
-    // const li = document.createElement("li");
-    // li.classList.add("city");
-    // const markup = `
-  // <h2 class="city-name" data-name="${name},${sys.country}">
-  //   <span>${name}</span>
-  //   <sup>${sys.country}</sup>
-  // </h2>
-  // <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup>
-  // </div>
-  // <figure>
-  //   <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
-  //   <figcaption>${weather[0]["description"]}</figcaption>
-  // </figure>
-// `;
-//     li.innerHTML = markup;
-//     list.appendChild(li);
-//
-//
-//     // Clears content of search field
-//     msg.textContent = "";
-//     form.reset();
-//     input.focus();
 
