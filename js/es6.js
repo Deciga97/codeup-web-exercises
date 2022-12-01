@@ -33,15 +33,11 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-var name = 'Steve';
 
 // Replaced the var with const //
+const name = 'Steve';
 const email = 'steve.deciga@gmail.com';
-
-// Reassigning the variable thats been declared as const. //
-email = 'stevedee97@yahoo.com'
-
-var languages = ['HTML', 'CSS', 'Javascript'];
+const languages = ['HTML', 'CSS', 'Javascript'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -75,14 +71,12 @@ users.forEach(function(user) {
 
 // Arrow Function Code //
 
-users.forEach((user) => {
-  return emails.push(user.email);
+users.forEach((user) => emails.push(user.email));
 
-});
+// Same As //
 
 users.forEach((user) => {
   return names.push(user.name);
-
 });
 
 
@@ -109,7 +103,7 @@ users.forEach(function(user) {
 
 // Template String Code //
 // P.S. I'm not sure if i added the .join to the template string correctly, or if I was supposed to remove the .join to begin. //
-developers.push(`${name}'s email is ${email}. ${name} knows ${languages}.join(', ')`);
+developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}`);
 
 
 
