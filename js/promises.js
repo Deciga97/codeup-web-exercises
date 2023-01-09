@@ -13,7 +13,7 @@ function makeRequestForLastCommit(username) {
     })
 }
 
-makeRequestForLastCommit("Deciga97")
+makeRequestForLastCommit("Bacanator")
 
 
 // Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds. //
